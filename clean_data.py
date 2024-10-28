@@ -29,18 +29,16 @@ def remove_duplicates(data):
 
 def handle_missing_values(data):
     """Imputes missing values for 'age', 'year', 'population' and remove rows with missing categorical data."""
-    # Log the initial state of missing values
     missing_before = data[data.isnull().any(axis=1)]
     initial_count = len(data)
     
     # Impute missing values for 'age' with the median
     data['age'] = data['age'].fillna(data['age'].median())
     
-    # If 'year' contains NaN after coercion, fill with a placeholder or remove
+    # If 'year' contains NaN after coercion, filling with a placeholder or remove
     if 'year' in data.columns:
         data['year'] = pd.to_numeric(data['year'], errors='coerce')
         if data['year'].isnull().any():
-            # Fill year with a placeholder value (e.g., -1) or a reasonable value
             data['year'] = data['year'].fillna(-1).astype(int)
     
     # If 'population' contains NaN, fill with 0 or a specified placeholder
@@ -51,7 +49,6 @@ def handle_missing_values(data):
     # Remove rows where 'income_groups' or 'gender' is missing
     data.dropna(subset=['income_groups', 'gender'], inplace=True)
     
-    # Log the final state after handling missing values
     missing_removed = initial_count - len(data)
     logging.info(f"Rows with missing values before cleaning: {len(missing_before)}")
     logging.info(f"Rows with missing values after cleaning: {missing_removed}")
