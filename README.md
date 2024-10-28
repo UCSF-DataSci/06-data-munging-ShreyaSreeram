@@ -10,7 +10,7 @@
 ### Column Details
 | Column Name | Data Type | Non-Null Count | Unique Values |  Mean  |
 |-------------|-----------|----------------|---------------|--------|
-| income_groups   object   | 119,412     |     8          | N/A|
+| income_groups |   object   | 119,412     |     8          | N/A|
 | age      | float64      |  119,495     |    101        | 50.07  |
 | gender  | float64      |  119,811      |     3         |   1.58     |
 | year    | float64      |  119,516      |     169       |    2025.07  |
