@@ -160,8 +160,7 @@ The cleaned dataset has undergone several transformations to improve its quality
 	•	Technical Skill Enhancement: The process helped me improve my technical proficiency with data manipulation tools and programming languages such as Python, R, SQL, or specialized data cleaning software.
 
 ### Next steps: 
-
+Some potential next steps to improve the EDA and data cleaning process could be: 
 	•	Automation of Cleaning Processes: Implementing automated cleaning pipelines using scripts or specialized software could reduce manual effort and time spent on future data cleaning tasks.
 	•	Continuous Data Quality Monitoring: Developing a system for ongoing monitoring of data quality could help in catching and correcting errors more dynamically as new data comes in.
-	•	Further Data Enrichment: Integrating external data sources could enrich the dataset, providing more depth and context for analysis. For example, adding demographic information could enhance a customer database, offering more nuanced insights.
-	•	Advanced Analytical Features: Implementing more advanced features such as predictive missing data imputation or machine learning-based outlier detection could refine the cleaning process and enhance data accuracy.
+	• Ensuring there are more effective ways that does not remove most of the information to prevent data loss!
