@@ -21,26 +21,38 @@
 1. **[Missing Values]**
    - Description: The dataset contains missing values across multiple columns which can introduce bias in analysis and may affect statistical calculations.
    - Affected Column(s): income_groups, age, gender, year, population
-   - Example: screenshot? 
+   - Example: I ran the following code to find missing values per column: 
+   ```python 
+   data.isnull().sum()
+   ```
    - Potential Impact: Missing demographic information can lead to unwanted bias, skewing the results. 
 
 2. **[Outliers in certain columns]**
    - Description: the "year" column for eg, has some values in the future which does not make sense. The "population" column has certain values multiplied by 100 or 1000, skewing the values.
    - Affected cols: year, population 
-   - Example: 
+   - Example: I used the following to find outliers: 
+   ```python 
+   data.describe())
+   ```
    - Potential impact: Having future or incorrect year could lead to inaccurate predictions within the data, and the outliters within the population column can lead to misinterpretation of summary statistics and analyses on the data. 
 
 
 3.  **[Incorrect data types]**
    - Description: Several columns are in float64 format that should be integers or categorical. 
    - Affected Column(s): income_groups, age, gender, year, population
-   - Example:  
+   - Example:  I ran 
+   ```python 
+   data.dtype()
+   ```
    - Potential Impact: Misinterpretations when conducting analyses on the data, and it also does not make sense for gender and year to be float types as we know they are non-integer values. This can also lead to issues during filtering and sorting of the columns. 
 
 4.  **[Duplicate Rows within the Dataset]**
    - Description: The dataset also contains certain duplicate rows 
    - Affected Column(s): income_groups, age, gender, year, population
-   - Example: 2,950 duplicate rows found. 
+   - Example: 2,950 duplicate rows found. I ran 
+```python 
+data.duplicated()
+```
    - Potential Impact: Duplicates can lead to biased statistical results, overestimating some metrics and underestimating others.
 
 
